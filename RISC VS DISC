@@ -1,0 +1,122 @@
+CISC : Complex Instruction Set Computer/Komplex Komut Seti Hesaplayıcısı
+8086 işlemciler 75 komuta sahiptir.
+Birincil amacı=Bir görevi az sayıda kod satırıyla tamamlamaktır.
+-Çarpma işlemi
+Bu komut önce iki sayı değerinin registerlara yükler,
+yürütme birimiyle çarpmayı gerçekleştirir,
+sonucu uygun registara kaydeder.
+
+Kodun uzunluğu oldukça kısalacağından;
+komutların yürütülmesi için harcanacak bellek miktarı oldukça düşüyor.
+Böylelikle derleyici daha az yorulmuş oluyor.
+
+1960'larda geliştirilen ve ilk mimarı yapı
+az bellek kapasitesine gereksinim duyulan yerlerde
+Intel 80×86=x86 mimarisinin gelişmesine yol açan 16 bit mimarisinde mikroişlemci yongası
+Pentium,Motorola 68030
+IBM 360 ve DEL WAX gibi büyük sistemlerde
+
+‘kademeli komut işleme’ tekniği olarak adlandırılan ve
+aynı anda yalnızca bir komut üzerinde işlem yapılan komut işleme tekniği kullanılır.
+
+1. Program sayıcısının gösterdiği adresten (bellekten) komutu al getir (FI-Fetch Instruction)
+2. Getirilen komutun kodunun çözülmesi ve mikro-kodların elde edilmesi (DI-Decode Instruction)
+3. Komutun ALU’da çalıştırılması (EI-Execute Instruction)
+4.Sonucun ilgili kaydediciye yüklenmesi (WB- Write Back Result) 
+
+CISC ‘de 16 adet register bulunur.
+Donanıma yönelik bir mimaridir.
+CISC mimarisinde devre karmaşıklaşıyor. Bu yüzden adresleme modlarının az olması işimizi daha zorlaştırıyor.
+
+RISC : Reduced Instruction Set Computer/Azaltılmış Komut Seti Hesaplayıcısı
+PIC16F877A işlemciler 35 komuta sahiptir.
+
+RISC işlemcileri yalnızca bir clock cycle ile yürütülebilen basit komutları kullanır.
+-Çarpma İşlemi
+Verileri Main Memory-Ana Bellek‘den registerlara taşıyan yükleme komutu(LOAD),
+iki değişkenin çarpımını bulan komut,
+İşlem sonucunu registerdan main memorydeki bellek bankalarına taşıyan saklama komutu(STORE).
+
+CISC ile tek satırda olan kod,RISC ile 4 satırda gerçekeleşir.
+RISC komutları bir clock cyle ile çalıştığından programın tamamı,
+yani 4 komut CISC ‘teki tek komutla neredeyse aynı sürede çalışacaktır.
+RISC daha az karmaşık donanım transistörleri gerektirir.
+registerlar için daha fazla alan bırakır
+gömülü sistemlerde RISC Mimarisi önemli bir yer edinmektedir.
+
+Kısacası, CISC mimarisinin komut setinde daha fazla spesifik komut olduğundan programcı daha az kod yazacaktır. 
+Bunun yanı-sıra RISC mimarisinin komut setinde daha az komut vardır 
+fakat programcının daha fazla komut yazması gerekmektedir.
+
+Daha az sayıda ve basit yapıya sahip komutlar = Hız
+
+performansını artıran önemli bir etken,
+Kanal Komut İşleme Tekniği (pipelining)=Birde fazla komutun işlenmesi
+daha fazla bellek ve daha gelişmiş derleme tekniği
+
+çok geniş ölçekli entegre (VLSI) teknolojisinin 1990’larda geliştirilmesi ile 
+RISC işlemciler büyük sistemlerin yanı sıra PC’lerde kullanılmaya başlandı.
+
+RISC ‘de 32 adet register bulunur.
+Yazılıma yönelik bir mimaridir.
+
+
+1- Hız: İki işlemci mimarisinin karşılaştırılmasından ilk önemli farkın; hızları olduğu bulunur.
+RISC işlemciler, genellikle aynı saat frekansında çalışan CISC işlemcilere göre daha hızlıdır.
+
+CISC talimatları RISC’den daha fazla çevrim kullanır.
+Azaltılmış komut kümesi sayesinde daha hızlı çalışırlar.
+RISC ‘de CPU’daki komut işleme daha hızlı olacağından,
+bu hızda çalışan CPU’ya hızlı RAM ve büyük önbelleklere ihtiyaç vardır.
+
+2- Komut İşleme Tekniği:
+
+CISC işlemcilerde ‘kademeli komut işleme’ tekniği kullanılırken,
+RISC işlemcilerde ‘kanal komut işleme tekniği’ (pipeline) kullanılır.
+
+CISC tekniği ile aynı anda tek bir komut işlenebildiği ve komutun,
+işlenmesi bitmeden yeni bir komut üzerinde çalışmaya başlanamaz. 
+RISC tekniğinde ise, aynı anda çok sayıda komut işlenmektedir.
+Komutların birbirini takip etmesi nedeni ile her bir komut bir birim uzunluktadır ve
+her işlem adımında bir komuta ait işlemler bitirilir.
+
+CISC’de farklı komutlar farklı sayıda saat çevrimine gerek duyacaklarından performans düşmesi gözlenir.
+RISC işlemcilerin komut kümeleri basitleştirildiklerinden çok az yonga kullanırlar.
+RISC’de bütün komutlar tek bir çevrimde çalıştırılmalıdır.
+RISC’de program derlenince daha fazla makine kodu olacağından CISC’e göre daha fazla alan kapsar.
+
+3- Transistör Sayısı:
+CISC işlemcilerde kullanılan transistor sayısı, RISC işlemcilere göre daha fazladır.
+
+Daha fazla sayıda transistor kullanılması, daha geniş alan gereksinimi ve daha fazla ısı ortaya çıkarır,
+Oluşan daha fazla ısı nedeniyle soğutma ihtiyacı ortaya çıkar ve soğutma işlemi, ısı dağıtıcısı veya fanlar kullanılarak gerçekleştirilir.
+
+CISC’de karmaşık işlemci yapısına bağlı olarak ihtiyaç duyulan transistör sayısı da artmıştır
+
+4- Donanımsal Yapı (Tasarım Şekli):
+RISC işlemciler, CISC işlemcilere göre daha basit yapıda olduklarından daha kolay tasarlanırlar.
+CISC için CPU yapısı her kuşak işlemci ile beraber daha karmaşıklaşmıştır.
+
+5- Komut yapısı: 
+RISC mimarisi, CISC’in güçlü komutlarından yoksundur.aynı işlemi yapmak için daha fazla komuta gereksinim duyar.
+RISC mimaride aynı uzunlukta basit komutlar kullanılırken CISC mimaride karmaşık yapıda değişken uzunlukta komutlar kullanılır.
+RISC’de belleğe sadece “Load” ve “Store” komutlarıyla erişilmelidir.
+RISC’in bütün icra birimleri mikrokod kullanılmadan donanımsal olarak çalışmaktadır.
+RISC’de komutlar sabit 32 bitliktir. CISC’de komutların boyutu sabit değildir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

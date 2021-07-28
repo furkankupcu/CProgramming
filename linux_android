@@ -1,0 +1,14 @@
+ANDROİD -- Android temel işletim sistemi işlevlerini çalıştırmak için değiştirilmiş bir Linux çekirdeği kullanır.
+Android, Gömülü Linux Çekirdeği 2.6'da geliştirildi.Derlenmiş Java kodunu çalıştırmak için Dalvik sanal makinasını kullanır.
+Android kullanıcısıysanız bunu telefonunuzun ayarlar kısmındaki telefon hakkında bölümünden görebilirsiniz.
+Linux açık kaynaklı bir çekirdek olduğu için Google’da çalışan insanlar sıfırdan çekirdek yazmaya ihtiyaç duymamışlar.
+Android sadece Linux çekirdeğini kullanmıyor, çok sayıda ek kütüphane, GUI, uygulamalar ve daha fazlasından oluşan bir işletim sistemidir.
+Android, Linux çekirdeği üzerine inşa edilmiş bir mobil işletim sistemidir.
+Bu sistem ara katman yazılımı, kütüphaneler ve API C diliyle yazılmıştır.
+Benim telefonum = 4.4.153-perf
+
+Android Neden Linux Değil?
+Android’in Linux olmadığını savunan bazı insanlar şunlara dayandırmaktadırlar:
+Standart Linux çekirdeğini kullanmaması
+GNU kütüphanelerini ve yazılımlarını içermemesi
+Android’de Linux uygulamalarının çalıştırılamaması yada tam tersi
